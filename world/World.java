@@ -18,8 +18,7 @@ public class World {
 	    // variable so that it is not re-seeded every call.
 	    Random rand = new Random();
 
-	    // nextInt is normally exclusive of the top value,
-	    // so add 1 to make it inclusive
+	  
 	    int randomInt = rand.nextInt((max - min) + 1) + min;
 	  
 	    double randomNumber = randomInt;
