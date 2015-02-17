@@ -3,24 +3,23 @@ package geneticAlgaritham.organism;
 
 public class Organism {
 
-	public double money;
+	public double Omoney;
 	public int organismID;
+	public double faith;
 	
-
 	
 	public Organism() {
-//		assign organism(organismNumber) a rule set
-		money = 1000;	
+		Omoney = 1000;	
 		
 	
 			
 		}
 
 	public double getMoney() {
-		return money;
+		return Omoney;
 		}
 	public void setMoney(double money) {
-		this.money = money;
+		this.Omoney = money;
 	}
 	
 	public int getOrganismID() {
@@ -29,5 +28,11 @@ public class Organism {
 	public void setOrganismID(int organismID) {
 		this.organismID = organismID;
 	}
-		
+	
+	public double getFaith() {
+		return faith;
+	}
+	public void setFaith(double faith) {
+	this.faith = faith;
+	}
 	}

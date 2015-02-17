@@ -7,11 +7,11 @@ import geneticAlgaritham.organism.Organism;
 
 public class World {
 	
-	Organism[] organismArray = new Organism[10];
+	public static Organism[] organismArray = new Organism[10];
 	public static int organismID = 1;
 	public static int time = 1;
 	public static int maxTime = 10;
-	public static double money;
+	public static double WMoney;
 	public static double randInt(int min, int max) {
 
 	    // NOTE: Usually this should be a field rather than a method
@@ -25,32 +25,35 @@ public class World {
 	    return randomNumber;
 	    
 	}
-	public static void main(String[] args) {
+	
+	public static void runWorld() {
 	
 
 			
-		Organism[] organism = new Organism[10];
-			for (int i = 0 ; i < organism.length ; i++) {
-				organism[i] = new Organism();
-				organism[i].setOrganismID(organismID);
+		
+			for (int i = 0 ; i < organismArray.length ; i++) {
+				organismArray[i] = new Organism();
+				organismArray[i].setOrganismID(organismID);
 				organismID++;
 				
 		}
-		while (time < maxTime) {
-			for (int i = 0; i < organism.length; i++) {		
-				money = organism[i].getMoney();
-				money += randInt(0,10);
-				System.out.println(money);
-				int organismID;
-				organismID = organism[i].getOrganismID();
-				System.out.println(organismID);
-				organism[i].setMoney(money);
+		while (time <= maxTime) {
+			System.out.println("Time Period " + time);
+			for (int i = 0; i < organismArray.length; i++) {		
+				WMoney = organismArray[i].getMoney();
+				WMoney += randInt(0,10);
+				organismID = organismArray[i].getOrganismID();
+				organismArray[i].setMoney(WMoney);
+				System.out.println("Organism " + organismID + " has $" + WMoney);
 				 }
 			time++;
 			}
+
 		
 		}
-	
-		
-		
+//	public Organism[] getOrganismArray() {
+//		return organismArray;
+//    }
 }
+    
+
